@@ -1,0 +1,57 @@
+Description: disable gid tests
+ uid used in debci machines has just one group. This patch fix test in this
+ case
+Author: Xavier Guimard <yadd@debian.org>
+Forwarded: not-needed
+Last-Update: 2020-02-16
+
+--- a/test/basic.js
++++ b/test/basic.js
+@@ -21,6 +21,7 @@
+     groups = output.trim().split("=")[3].split(",")
+       .map(s => parseInt(s, 10))
+       .filter(g => g !== curGid)
++    groups[0] = groups[0] == null ? curGid : groups[0];
+     t.end()
+   })
+ })
+--- a/test/concurrent-sync.js
++++ b/test/concurrent-sync.js
+@@ -20,6 +20,7 @@
+     groups = output.trim().split("=")[3].split(",")
+       .map(s => parseInt(s, 10))
+       .filter(g => g !== curGid)
++    groups[0] = groups[0] == null ? curGid : groups[0];
+     t.end()
+   })
+ })
+--- a/test/concurrent.js
++++ b/test/concurrent.js
+@@ -21,6 +21,7 @@
+     groups = output.trim().split("=")[3].split(",")
+       .map(s => parseInt(s, 10))
+       .filter(g => g !== curGid)
++    groups[0] = groups[0] == null ? curGid : groups[0];
+     t.end()
+   })
+ })
+--- a/test/non-handled-errors.js
++++ b/test/non-handled-errors.js
+@@ -21,6 +21,7 @@
+     groups = output.trim().split("=")[3].split(",")
+       .map(s => parseInt(s, 10))
+       .filter(g => g !== curGid)
++    groups[0] = groups[0] == null ? curGid : groups[0];
+     t.end()
+   })
+ })
+--- a/test/sync.js
++++ b/test/sync.js
+@@ -20,6 +20,7 @@
+     groups = output.trim().split("=")[3].split(",")
+       .map(s => parseInt(s, 10))
+       .filter(g => g !== curGid)
++    groups[0] = groups[0] == null ? curGid : groups[0];
+     t.end()
+   })
+ })

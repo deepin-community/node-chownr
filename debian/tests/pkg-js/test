@@ -1,0 +1,2 @@
+#tap test/*.js
+tap concurrent-sync.js old-readdir.js
