@@ -1,2 +1,2 @@
 #tap test/*.js
-tap concurrent-sync.js old-readdir.js
+tap -R tap --no-cov test/concurrent-sync.js

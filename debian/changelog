@@ -1,3 +1,18 @@
+node-chownr (2.0.0-3) unstable; urgency=medium
+
+  * Team upload
+  * Declare compliance with policy 4.7.0
+  * Fix test for nodejs (Closes: #1072597)
+
+ -- Yadd <yadd@debian.org>  Mon, 10 Jun 2024 16:10:33 +0400
+
+node-chownr (2.0.0-2) unstable; urgency=medium
+
+  * Team upload
+  * Fix test (Closes: #1009576)
+
+ -- Yadd <yadd@debian.org>  Wed, 13 Apr 2022 13:52:53 +0200
+
 node-chownr (2.0.0-1) unstable; urgency=medium
 
   * Team upload
