@@ -10,7 +10,7 @@ Build-Depends:
  , node-mkdirp (>= 1) <!nocheck>
  , node-rimraf <!nocheck>
  , dh-sequence-nodejs
-Standards-Version: 4.6.0
+Standards-Version: 4.7.0
 Homepage: https://github.com/isaacs/chownr#readme
 Vcs-Git: https://salsa.debian.org/js-team/node-chownr.git
 Vcs-Browser: https://salsa.debian.org/js-team/node-chownr
